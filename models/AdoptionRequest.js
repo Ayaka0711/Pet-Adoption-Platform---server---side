@@ -1,4 +1,3 @@
-// models/AdoptionRequest.js
 import mongoose from "mongoose";
 
 const adoptionRequestSchema = new mongoose.Schema(
@@ -10,7 +9,6 @@ const adoptionRequestSchema = new mongoose.Schema(
     // Pet owner's email — this is who is authorized to approve/reject.
     ownerEmail: { type: String, required: true, index: true },
 
-    // Requester (adopter) info.
     requesterName: { type: String, required: true },
     requesterEmail: { type: String, required: true, index: true },
 
