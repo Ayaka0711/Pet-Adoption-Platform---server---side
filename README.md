@@ -74,10 +74,6 @@ cp .env.example .env   # fill in MONGODB_URI, BETTER_AUTH_SECRET, GOOGLE_CLIENT_
 npm run dev
 ```
 
-## Environment Variables
-
-| Variable | Description |
-|---|---|
 # ---- MongoDB ----
 MONGODB_URI=mongodb+srv://minayathreads99_db_user:mItvqXmXhsxWtP8w@cluster0.m5rajbr.mongodb.net/pawhome?retryWrites=true&w=majority&appName=Cluster0
 
