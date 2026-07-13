@@ -70,25 +70,24 @@ Node.js · Express · MongoDB Atlas · Mongoose · BetterAuth
 
 ```bash
 npm install
-cp .env.example .env   # fill in MONGODB_URI, BETTER_AUTH_SECRET, GOOGLE_CLIENT_ID/SECRET
+cp .env.example .env   # fill in your own values — see table below
 npm run dev
 ```
 
-# ---- MongoDB ----
-MONGODB_URI=mongodb+srv://minayathreads99_db_user:mItvqXmXhsxWtP8w@cluster0.m5rajbr.mongodb.net/pawhome?retryWrites=true&w=majority&appName=Cluster0
+## Environment Variables
 
-BETTER_AUTH_SECRET=b222a713f5d69be9138f5cd559a170108926971dbcf98976163585ebed3cbc95
+Copy `.env.example` to `.env` and fill in your own values. **Never commit real secrets** — this
+table only describes what each variable is for, it does not contain actual values.
 
-PORT=5000
-
-NODE_ENV=development
-SERVER_URL=http://localhost:5000
-
-CLIENT_URL=http://localhost:5173
-
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
-
+| Variable | Description |
+|---|---|
+| `MONGODB_URI` | Your MongoDB Atlas connection string |
+| `BETTER_AUTH_SECRET` | A random secret used to sign session tokens — generate your own with `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"` |
+| `PORT` | Port the server listens on (defaults to `5000`) |
+| `NODE_ENV` | `development` locally, `production` when deployed |
+| `SERVER_URL` | This server's own public URL (used as BetterAuth's `baseURL`) |
+| `CLIENT_URL` | The deployed client's URL (used for CORS + trusted origins) |
+| `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET` | Your own Google OAuth credentials from the Google Cloud Console |
 
 ## Deployment
 
