@@ -1,4 +1,4 @@
-# PawHome — Pet Adoption Platform (Server)
+# PetHome — Pet Adoption Platform (Server)
 
 ## Purpose
 
